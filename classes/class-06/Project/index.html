@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOLLOW PINE — Official Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Poppins:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Outer border frame -->
+  <div class="page-frame">
+
+    <!-- Noise texture overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-logo">H·P</div>
+      <ul class="nav-links">
+        <li><a href="#music">Music</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul>
+        <li><a href="#music" class="mobile-nav-link">Music</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#shows" class="mobile-nav-link">Shows</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Hero section">
+
+      <!-- Floating gradient blobs -->
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="blob blob-3" aria-hidden="true"></div>
+
+      <!-- Abstract music circles -->
+      <div class="vinyl-ring ring-1" aria-hidden="true"></div>
+      <div class="vinyl-ring ring-2" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-in delay-1">
+          <span class="dot"></span>
+          <span>Est. 2019 · Portland, OR</span>
+        </div>
+
+        <div class="hero-heading-wrap fade-in delay-2">
+          <h1 class="hero-title">
+            <span class="title-line">Hollow</span>
+            <span class="title-line italic">Pine</span>
+          </h1>
+          <div class="hero-sub-block">
+            <p class="hero-sub">Indie Folk · Dream Pop</p>
+            <p class="hero-tagline">Where silence<br/>becomes sound</p>
+          </div>
+        </div>
+
+        <div class="hero-cta-wrap fade-in delay-3">
+          <a href="#music" class="cta-btn">
+            <span class="cta-text">Enter the Experience</span>
+            <span class="cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="hero-new-release">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            New EP — <em>"Dusk & Marrow"</em> out now
+          </p>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator fade-in delay-4" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+
+    </section>
+
+    <!-- MUSIC / ALBUMS -->
+    <section class="music-section" id="music" aria-label="Music section">
+      <div class="section-label">— Discography</div>
+      <h2 class="section-title fade-up">The Sound of<br/><em>Hollow Pine</em></h2>
+
+      <div class="albums-grid">
+
+        <article class="album-card fade-up delay-1">
+          <div class="album-art art-1">
+            <div class="album-overlay">
+              <span class="album-year">2024</span>
+              <button class="play-btn" aria-label="Play Dusk and Marrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="album-info">
+            <h3>Dusk &amp; Marrow</h3>
+            <p>EP · 6 tracks</p>
+          </div>
+        </article>
+
+        <article class="album-card fade-up delay-2">
+          <div class="album-art art-2">
+            <div class="album-overlay">
+              <span class="album-year">2022</span>
+              <button class="play-btn" aria-label="Play Ashen Light">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="album-info">
+            <h3>Ashen Light</h3>
+            <p>LP · 11 tracks</p>
+          </div>
+        </article>
+
+        <article class="album-card fade-up delay-3">
+          <div class="album-art art-3">
+            <div class="album-overlay">
+              <span class="album-year">2020</span>
+              <button class="play-btn" aria-label="Play Still Water">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5,3 19,12 5,21"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="album-info">
+            <h3>Still Water</h3>
+            <p>LP · 9 tracks</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WAVEFORM DIVIDER -->
+    <div class="waveform-section" aria-hidden="true">
+      <canvas id="waveformCanvas"></canvas>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about" aria-label="About section">
+      <div class="about-grid">
+        <div class="about-visual fade-up">
+          <div class="about-photo-frame">
+            <div class="photo-inner">
+              <div class="photo-grain"></div>
+              <div class="band-silhouette" aria-hidden="true">
+                <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                  <!-- Background shapes suggesting a moody forest scene -->
+                  <defs>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:#1E1E1E;stop-opacity:0"/>
+                      <stop offset="60%" style="stop-color:#2a2a2a;stop-opacity:0.5"/>
+                      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1"/>
+                    </linearGradient>
+                    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:#A3B18A;stop-opacity:0.5"/>
+                      <stop offset="100%" style="stop-color:#A3B18A;stop-opacity:0.15"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Moon -->
+                  <circle cx="220" cy="70" r="38" fill="#D6CCC2" opacity="0.12"/>
+                  <circle cx="220" cy="70" r="30" fill="#C7B78A" opacity="0.18"/>
+                  <!-- Pine trees (silhouette) -->
+                  <polygon points="40,380 70,200 100,380" fill="url(#treeGrad)"/>
+                  <polygon points="55,380 90,160 125,380" fill="#A3B18A" opacity="0.25"/>
+                  <polygon points="150,380 185,130 220,380" fill="url(#treeGrad)"/>
+                  <polygon points="200,380 230,180 260,380" fill="#A3B18A" opacity="0.2"/>
+                  <polygon points="0,380 25,240 55,380" fill="#A3B18A" opacity="0.15"/>
+                  <polygon points="240,380 265,210 295,380" fill="#A3B18A" opacity="0.18"/>
+                  <!-- Ground mist -->
+                  <ellipse cx="150" cy="370" rx="160" ry="25" fill="#D6CCC2" opacity="0.07"/>
+                  <!-- Gradient overlay -->
+                  <rect x="0" y="0" width="300" height="380" fill="url(#bgGrad)"/>
+                  <!-- Stars -->
+                  <circle cx="50" cy="40" r="1.2" fill="#F5F3EF" opacity="0.6"/>
+                  <circle cx="110" cy="25" r="1" fill="#F5F3EF" opacity="0.5"/>
+                  <circle cx="170" cy="55" r="1.5" fill="#F5F3EF" opacity="0.7"/>
+                  <circle cx="80" cy="90" r="1" fill="#F5F3EF" opacity="0.4"/>
+                  <circle cx="260" cy="30" r="1.2" fill="#F5F3EF" opacity="0.55"/>
+                  <circle cx="30" cy="120" r="0.8" fill="#F5F3EF" opacity="0.4"/>
+                  <circle cx="135" cy="80" r="1" fill="#C7B78A" opacity="0.6"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="about-photo-caption">Portland, OR — 2024</div>
+        </div>
+
+        <div class="about-text fade-up delay-2">
+          <div class="section-label">— About</div>
+          <h2 class="section-title">Four people,<br/><em>one quiet noise</em></h2>
+          <p class="about-body">
+            Hollow Pine began as late-night recordings in a rain-soaked garage on the outskirts of Portland. Four friends — a poet, a painter, a drifter, and an architect — searching for a sound that felt like memory.
+          </p>
+          <p class="about-body">
+            Today, their music drifts between folk and dream pop, layering intimate vocals over textured strings and ambient light. They make space for the listener to breathe.
+          </p>
+          <div class="band-members">
+            <div class="member">
+              <span class="member-name">Clara Voss</span>
+              <span class="member-role">Vocals, Guitar</span>
+            </div>
+            <div class="member">
+              <span class="member-name">Eli Shore</span>
+              <span class="member-role">Keys, Production</span>
+            </div>
+            <div class="member">
+              <span class="member-name">Mara Finn</span>
+              <span class="member-role">Cello, Violin</span>
+            </div>
+            <div class="member">
+              <span class="member-name">Jonas Ré</span>
+              <span class="member-role">Drums, Percussion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWS -->
+    <section class="shows-section" id="shows" aria-label="Upcoming shows">
+      <div class="section-label">— Live</div>
+      <h2 class="section-title fade-up">On the Road</h2>
+
+      <div class="shows-list">
+        <article class="show-row fade-up delay-1">
+          <div class="show-date">
+            <span class="date-day">14</span>
+            <span class="date-month">Jun</span>
+          </div>
+          <div class="show-details">
+            <h3>Wonder Ballroom</h3>
+            <p>Portland, OR</p>
+          </div>
+          <div class="show-tag">Sold Out</div>
+          <a href="#contact" class="show-ticket sold-out" aria-label="Sold out - Portland show">Sold Out</a>
+        </article>
+
+        <article class="show-row fade-up delay-2">
+          <div class="show-date">
+            <span class="date-day">22</span>
+            <span class="date-month">Jun</span>
+          </div>
+          <div class="show-details">
+            <h3>The Fillmore</h3>
+            <p>San Francisco, CA</p>
+          </div>
+          <div class="show-tag available">Few Left</div>
+          <a href="#contact" class="show-ticket" aria-label="Get tickets for San Francisco show">Tickets</a>
+        </article>
+
+        <article class="show-row fade-up delay-3">
+          <div class="show-date">
+            <span class="date-day">07</span>
+            <span class="date-month">Jul</span>
+          </div>
+          <div class="show-details">
+            <h3>Brooklyn Steel</h3>
+            <p>New York, NY</p>
+          </div>
+          <div class="show-tag available">Available</div>
+          <a href="#contact" class="show-ticket" aria-label="Get tickets for New York show">Tickets</a>
+        </article>
+
+        <article class="show-row fade-up delay-4">
+          <div class="show-date">
+            <span class="date-day">19</span>
+            <span class="date-month">Jul</span>
+          </div>
+          <div class="show-details">
+            <h3>Pitchfork Music Festival</h3>
+            <p>Chicago, IL</p>
+          </div>
+          <div class="show-tag available">Available</div>
+          <a href="#contact" class="show-ticket" aria-label="Get tickets for Chicago show">Tickets</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUOTE STRIP -->
+    <div class="quote-strip fade-up" aria-label="Press quote">
+      <blockquote>
+        <p>"A sound that feels like the last hour of golden light before everything goes dark."</p>
+        <cite>— Pitchfork, 2024</cite>
+      </blockquote>
+    </div>
+
+    <!-- CONTACT / FOOTER -->
+    <footer class="footer" id="contact" aria-label="Footer and contact">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Hollow Pine</div>
+          <p class="footer-tagline">Where silence becomes sound.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Spotify">Spotify</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Bandcamp">Bandcamp</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label">Bookings &amp; Press</p>
+          <a href="mailto:hello@hollowpine.com" class="footer-email">hello@hollowpine.com</a>
+          <p class="footer-label" style="margin-top:1.5rem">Management</p>
+          <a href="mailto:mgmt@hollowpine.com" class="footer-email">mgmt@hollowpine.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Hollow Pine. All rights reserved.</span>
+        <span>Crafted with silence.</span>
+      </div>
+    </footer>
+
+  </div><!-- end .page-frame -->
+
+  <script src="script.js"></script>
+</body>
+</html>
